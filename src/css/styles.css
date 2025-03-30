@@ -55,6 +55,6 @@ input {
 
 .container {
     max-width: 1128px;
-    max-height: 1240px;
+    /* height: 1240px; */
     padding: 36px 156px;
 }
