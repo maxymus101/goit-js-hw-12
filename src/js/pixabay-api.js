@@ -3,25 +3,28 @@ import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-export function fetchOnQuery(query) {
+const API_KEY = '49484278-b8d1b278e9cf12a9e395a9aea';
+const BASE_URL = 'https://pixabay.com/api/';
+
+export function getImagesByQuery(query, page) {
   return axios
-    .get('https://pixabay.com/api/', {
+    .get(BASE_URL, {
       params: {
-        key: '49484278-b8d1b278e9cf12a9e395a9aea',
+        key: API_KEY,
         q: query,
         image_type: 'photo',
         orientation: 'horizontal',
         safesearch: true,
+        page: page,
+        per_page: 15,
       },
     })
-    .then(response => {
-      if (response.data.hits.length === 0) {
-        return Promise.reject('No images found');
-      }
-      return response.data;
-    })
+    .then(response => ({
+      hits: response.data.hits,
+      totalHits: response.data.totalHits,
+    }))
     .catch(error => {
-      console.log('Помилка запиту :>> ', error);
-      return Promise.reject(error);
+      console.error('Помилка запиту:', error);
+      throw error;
     });
 }
