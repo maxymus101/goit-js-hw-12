@@ -68,7 +68,7 @@ form.addEventListener('submit', async event => {
       hideLoadMoreButton();
     } else {
       createGallery(data.hits);
-      if (currentPage * 40 >= data.totalHits) {
+      if (currentPage * 15 >= data.totalHits) {
         hideLoadMoreButton();
         iziToast.info({
           title: '',
@@ -119,7 +119,8 @@ loadMoreButton.addEventListener('click', async () => {
       behavior: 'smooth',
     });
 
-    if (currentPage * 40 >= data.totalHits) {
+    if (currentPage * 15 >= data.totalHits) {
+      hideLoadMoreButton();
       iziToast.info({
         title: '',
         message: "We're sorry, but you've reached the end of search results.",
