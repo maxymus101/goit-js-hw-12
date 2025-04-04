@@ -27,7 +27,7 @@ form.addEventListener('submit', async event => {
       title: '',
       titleColor: '#FFFFFF',
       iconColor: '#fffff',
-      iconUrl: '../img/svg/wn-ic.svg',
+      iconUrl: './img/svg/wn-ic.svg',
       messageColor: '#FFFFFF',
       backgroundColor: '#ef4040',
       position: 'topRight',
