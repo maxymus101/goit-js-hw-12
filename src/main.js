@@ -10,6 +10,10 @@ import {
   hideLoadMoreButton,
   loadMoreButton,
 } from './js/render-functions';
+import pathIcon from './img/svg/wn-ic.svg';
+{
+  iconUrl: pathIcon;
+}
 
 const form = document.querySelector('.form');
 const searchInp = document.querySelector('input[name="search-text"]');
@@ -27,7 +31,7 @@ form.addEventListener('submit', async event => {
       title: '',
       titleColor: '#FFFFFF',
       iconColor: '#fffff',
-      iconUrl: 'img/svg/wn-ic.svg',
+      iconUrl: pathIcon,
       messageColor: '#FFFFFF',
       backgroundColor: '#ef4040',
       position: 'topRight',
@@ -55,7 +59,7 @@ form.addEventListener('submit', async event => {
         title: '',
         titleColor: '#FFFFFF',
         iconColor: '#fffff',
-        iconUrl: 'img/svg/wn-ic.svg',
+        iconUrl: pathIcon,
         messageColor: '#FFFFFF',
         backgroundColor: '#ef4040',
         position: 'topRight',
@@ -84,7 +88,7 @@ form.addEventListener('submit', async event => {
       title: '',
       titleColor: '#FFFFFF',
       iconColor: '#fffff',
-      iconUrl: 'img/svg/wn-ic.svg',
+      iconUrl: pathIcon,
       messageColor: '#FFFFFF',
       backgroundColor: '#ef4040',
       position: 'topRight',
@@ -132,7 +136,7 @@ loadMoreButton.addEventListener('click', async () => {
       title: '',
       titleColor: '#FFFFFF',
       iconColor: '#fffff',
-      iconUrl: 'img/svg/wn-ic.svg',
+      iconUrl: pathIcon,
       messageColor: '#FFFFFF',
       backgroundColor: '#ef4040',
       position: 'topRight',
